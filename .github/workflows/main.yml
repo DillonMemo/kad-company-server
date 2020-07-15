@@ -12,7 +12,7 @@ on: [push, pull_request]
 
 jobs:
   build:
-    name: Test on node ${{ matrix.node-version }} and ${{ matrix.os }}
+    name: node ${{ matrix.node-version }} and ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
 
     strategy:

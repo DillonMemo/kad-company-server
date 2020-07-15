@@ -1,0 +1,16 @@
+type AddInquireResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  AddInquire(
+    companyName: String!
+    firstName: String!
+    lastName: String!
+    email: String!
+    phoneNumber: String!
+    budget: String!
+    content: String
+  ): AddInquireResponse!
+}

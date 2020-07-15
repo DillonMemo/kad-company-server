@@ -2,6 +2,7 @@
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "extends": ["plugin:@typescript-eslint/recommended"],
+  "ignorePatterns": ["src/index.ts"],
   "rules": {
     "no-console": "off",
     "no-unreachable": "error", // return, break, throw, continue 다음에 코드 허용 x
@@ -14,7 +15,8 @@
     {
       "files": ["*.ts", "*.tsx"],
       "rules": {
-        "@typescript-eslint/explicit-module-boundary-types": ["off"] // 함수 반환 값과 인수에 대한 명시 적 유형은 모든 호출 코드에서 모듈 경계의 입력 및 출력 x
+        "@typescript-eslint/explicit-module-boundary-types": ["off"], // 함수 반환 값과 인수에 대한 명시 적 유형은 모든 호출 코드에서 모듈 경계의 입력 및 출력 x
+        "sort-imports": ["error", { "ignoreCase": true }]
       }
     }
   ]

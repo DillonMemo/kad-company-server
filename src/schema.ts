@@ -1,6 +1,6 @@
+import { fileLoader, mergeResolvers, mergeTypes } from 'merge-graphql-schemas';
 import { GraphQLSchema } from 'graphql';
 import { makeExecutableSchema } from 'graphql-tools';
-import { fileLoader, mergeResolvers, mergeTypes } from 'merge-graphql-schemas';
 import path from 'path';
 
 // api 폴더 안에 있는, 깊이에 상관없이 모든 폴더들 안에 있는 파일들 중 .graphql로 끝나는 파일들을 모두 가져오기

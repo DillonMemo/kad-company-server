@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/DillonMemo/kad-company-server#readme",
   "dependencies": {
+    "class-validator": "^0.12.2",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "graphql-tools": "^6.0.13",
@@ -32,7 +33,9 @@
     "merge-graphql-schemas": "^1.7.8",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.4",
+    "pg": "^8.3.0",
     "ts-node": "^8.10.2",
+    "typeorm": "^0.2.25",
     "typescript": "^3.9.6"
   },
   "devDependencies": {
