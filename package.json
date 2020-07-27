@@ -6,11 +6,15 @@
   "scripts": {
     "lint": "eslint './src/**/*.{ts,tsx,js,jsx}'",
     "lint:fix": "eslint --fix './src/**/*.{ts,tsx,js,jsx}'",
-    "tsc": "tsc --init",
+    "tsc": "tsc",
     "predev": "npm run types",
     "dev": "cd src && nodemon --exec ts-node index.ts -e ts,graphql",
     "pretypes": "gql-merge --out-file ./src/schema.graphql ./src/api/**/*.graphql",
-    "types": "graphql-to-typescript ./src/schema.graphql ./src/types/graphql.d.ts"
+    "types": "graphql-to-typescript ./src/schema.graphql ./src/types/graphql.d.ts",
+    "prebuild": "rm -rf dist",
+    "build": "tsc",
+    "postbuild": "cd src && copy ./api/**/*.graphql ../dist/api",
+    "start": "cd dist && node ."
   },
   "repository": {
     "type": "git",
@@ -46,9 +50,9 @@
     "@typescript-eslint/eslint-plugin": "^3.6.1",
     "@typescript-eslint/parser": "^3.6.1",
     "babel-runtime": "^6.26.0",
+    "copy": "^0.3.2",
     "eslint": "^7.4.0",
     "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-react": "^7.20.3",
     "gql-merge": "0.0.6",
     "graphql-to-typescript": "^0.1.2"
   }
