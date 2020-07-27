@@ -25,7 +25,6 @@
       "files": ["*.ts", "*.tsx"],
       "rules": {
         "@typescript-eslint/explicit-module-boundary-types": ["off"], // 함수 반환 값과 인수에 대한 명시 적 유형은 모든 호출 코드에서 모듈 경계의 입력 및 출력 x
-<<<<<<< HEAD
         "sort-imports": [
           "error",
           {
@@ -33,9 +32,6 @@
             "ignoreCase": true
           }
         ]
-=======
-        "sort-imports": ["error", { "ignoreCase": true }]
->>>>>>> bc2d02a9538e410c389c154113bba83c22aa12c4
       }
     }
   ]
