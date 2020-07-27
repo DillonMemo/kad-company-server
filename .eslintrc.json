@@ -5,18 +5,37 @@
   "ignorePatterns": ["src/index.ts"],
   "rules": {
     "no-console": "off",
-    "no-unreachable": "error", // return, break, throw, continue 다음에 코드 허용 x
-    "jsx-quotes": ["error", "prefer-double"], // 큰 따옴표, 작은따옴표 규칙
-    "eqeqeq": ["error", "always"], // ===, !==
+    "no-debugger": "off",
+    "no-unreachable": "error",
+    "jsx-quotes": ["error", "prefer-double"],
+    "eqeqeq": ["error", "always"],
     "@typescript-eslint/no-inferrable-types": "off",
-    "@typescript-eslint/no-explicit-any": "off"
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/no-unsafe-call": "off",
+    "@typescript-eslint/no-unsafe-member-access": "off",
+    "@typescript-eslint/no-unsafe-return": "off",
+    "@typescript-eslint/restrict-template-expressions": "off",
+    "@typescript-eslint/unbound-method": "off",
+    "@typescript-eslint/require-await": "off"
   },
   "overrides": [
     {
       "files": ["*.ts", "*.tsx"],
       "rules": {
         "@typescript-eslint/explicit-module-boundary-types": ["off"], // 함수 반환 값과 인수에 대한 명시 적 유형은 모든 호출 코드에서 모듈 경계의 입력 및 출력 x
+<<<<<<< HEAD
+        "sort-imports": [
+          "error",
+          {
+            "ignoreDeclarationSort": true,
+            "ignoreCase": true
+          }
+        ]
+=======
         "sort-imports": ["error", { "ignoreCase": true }]
+>>>>>>> bc2d02a9538e410c389c154113bba83c22aa12c4
       }
     }
   ]
