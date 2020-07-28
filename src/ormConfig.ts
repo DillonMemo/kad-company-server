@@ -2,7 +2,7 @@ import { ConnectionOptions } from 'typeorm';
 
 const connectionOptions: ConnectionOptions = {
   type: 'postgres',
-  database: 'kad',
+  database: process.env.DB_NAME || 'kad',
   synchronize: true,
   logging: true, // 콘솔창에 DB쿼리 표시
   entities: ['entities/**/*.*'], // 모델 파일이 들어갈 폴더 경로
